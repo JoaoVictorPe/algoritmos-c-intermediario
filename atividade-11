@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+	
+setlocale(LC_ALL, "português");	
+
+int n1, primo, cont;
+	printf("Digite um n?mero: ");
+	scanf("%i", &n1);
+		
+		
+	for(cont=1; cont<=n1; cont++){
+		
+		if(n1%cont==0){
+			primo++;
+			
+		}
+	 }
+	
+	if(primo==2){
+	printf("O numero %i e primo", n1);
+  }else{
+	printf("O numero %i nao e primo", n1);
+	 }
+}
