@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+	
+setlocale(LC_ALL, "português");	
+
+ int numero, invertido = 0, digito;
+
+    printf("Digite um número: ");
+    scanf("%d", &numero);
+
+    for (numero != 0) {
+        digito = numero % 10;
+        invertido = invertido * 10 + digito;
+        numero /= 10;
+    }
+
+    printf("O número invertido é: %d\n", invertido);
+
+    return 0;
+}
