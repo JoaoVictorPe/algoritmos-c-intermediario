@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+	
+setlocale(LC_ALL, "português");	
+
+int n, i, sum = 0;
+
+    printf("Digite um número inteiro positivo: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; ++i) {
+        sum += i;
+    }
+
+    printf("A soma dos primeiros %d números naturais é: %d\n", n, sum);
+
+    return 0;
+}	
