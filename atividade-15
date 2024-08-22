@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+
+int main(int argc, char const *argv[]) {
+	
+setlocale(LC_ALL, "português");	
+
+ int x, y, i, pot;
+ 
+ printf("Digite o valor: ");
+ scanf("%d", &x);
+ printf("Digite o valor para a potenciação: ");
+ scanf("%d", &y);
+ 
+ i = 1;
+ 
+ pot = 1; 
+ 
+ while (i <= y) {
+ 	pot *= x;
+ 	i++;
+ } 
+ 
+ printf("O valor da potencia %d\n", pot);
+ 
+ 
+return 0;
+
+}
