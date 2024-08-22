@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+#include <string.h>
+
+int main(int argc, char const *argv[]) {
+	
+setlocale(LC_ALL, "português");	
+
+char str[100];
+    int i, j, flag = 1;
+
+    printf("Digite uma palavra ou número: ");
+    scanf("%s", str);
+
+    i = 0;
+    j = strlen(str) - 1;
+
+    while (i < j) {
+        if (str[i] != str[j]) {
+            flag = 0;
+            break;
+        }
+        i++;
+        j--;
+    }
+
+    if (flag) {
+        printf("%s é um palíndromo.\n", str);
+    } else {
+        printf("%s não é um palíndromo.\n", str);
+    }
+
+    return 0;
+}
